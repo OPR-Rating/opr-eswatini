@@ -3,7 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>OPR Kloof</title>
+<title>OPR Eswatini</title>
+<link rel="manifest" href="./manifest.json">
+<meta name="theme-color" content="#6C3483">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="OPR Eswatini">
+<link rel="apple-touch-icon" href="./icon-192.png">
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #fff; min-height: 100vh; }
@@ -189,7 +195,7 @@
           <span class="ball-pair"><svg class="pball" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="bg1" cx="38%" cy="33%" r="75%"><stop offset="0%" stop-color="#eaff66"/><stop offset="55%" stop-color="#c4e000"/><stop offset="100%" stop-color="#8fb500"/></radialGradient></defs><circle cx="50" cy="50" r="46" fill="url(#bg1)" stroke="#7da300" stroke-width="1"/><path d="M18 18 Q50 50 18 82" fill="none" stroke="#fbfff0" stroke-width="4" stroke-linecap="round"/><path d="M82 18 Q50 50 82 82" fill="none" stroke="#fbfff0" stroke-width="4" stroke-linecap="round"/><ellipse cx="40" cy="32" rx="14" ry="9" fill="rgba(255,255,255,0.35)"/></svg><svg class="pball" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="bg2" cx="38%" cy="33%" r="75%"><stop offset="0%" stop-color="#eaff66"/><stop offset="55%" stop-color="#c4e000"/><stop offset="100%" stop-color="#8fb500"/></radialGradient></defs><circle cx="50" cy="50" r="46" fill="url(#bg2)" stroke="#7da300" stroke-width="1"/><path d="M18 18 Q50 50 18 82" fill="none" stroke="#fbfff0" stroke-width="4" stroke-linecap="round"/><path d="M82 18 Q50 50 82 82" fill="none" stroke="#fbfff0" stroke-width="4" stroke-linecap="round"/><ellipse cx="40" cy="32" rx="14" ry="9" fill="rgba(255,255,255,0.35)"/></svg></span>
           <span class="ball-pair"><svg class="pball" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="bg3" cx="38%" cy="33%" r="75%"><stop offset="0%" stop-color="#eaff66"/><stop offset="55%" stop-color="#c4e000"/><stop offset="100%" stop-color="#8fb500"/></radialGradient></defs><circle cx="50" cy="50" r="46" fill="url(#bg3)" stroke="#7da300" stroke-width="1"/><path d="M18 18 Q50 50 18 82" fill="none" stroke="#fbfff0" stroke-width="4" stroke-linecap="round"/><path d="M82 18 Q50 50 82 82" fill="none" stroke="#fbfff0" stroke-width="4" stroke-linecap="round"/><ellipse cx="40" cy="32" rx="14" ry="9" fill="rgba(255,255,255,0.35)"/></svg><svg class="pball" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="bg4" cx="38%" cy="33%" r="75%"><stop offset="0%" stop-color="#eaff66"/><stop offset="55%" stop-color="#c4e000"/><stop offset="100%" stop-color="#8fb500"/></radialGradient></defs><circle cx="50" cy="50" r="46" fill="url(#bg4)" stroke="#7da300" stroke-width="1"/><path d="M18 18 Q50 50 18 82" fill="none" stroke="#fbfff0" stroke-width="4" stroke-linecap="round"/><path d="M82 18 Q50 50 82 82" fill="none" stroke="#fbfff0" stroke-width="4" stroke-linecap="round"/><ellipse cx="40" cy="32" rx="14" ry="9" fill="rgba(255,255,255,0.35)"/></svg></span>
         </div>
-        <h2>OPR-KLOOF</h2>
+        <h2>OPR-ESWATINI</h2>
         <p>Open Padel Rating System</p>
       </div>
     </div>
@@ -233,7 +239,7 @@
       </div>
       <div class="ladders-group-title">Form</div>
       <div class="ladders-grid one-col">
-        <button class="menu-btn" style="border-color:#7D3C98;box-shadow:0 0 12px rgba(125,60,152,0.4);" onclick="loadFormWall('1448532059','Form')">Form Wall</button>
+        <button class="menu-btn" style="border-color:#7D3C98;box-shadow:0 0 12px rgba(125,60,152,0.4);" onclick="loadFormWall('579066807','Form')">Form Wall</button>
       </div>
     </div>
   </div>
@@ -277,22 +283,24 @@
       <h1>Tournaments</h1>
     </div>
     <div class="screen-content">
-      <div style="background:linear-gradient(135deg,#6C3483,#2E6DB4);color:#fff;border-radius:12px;padding:16px;margin-bottom:8px;text-align:center;box-shadow:0 4px 14px rgba(108,52,131,0.3);">
-        <div style="font-size:15px;font-weight:700;margin-bottom:4px;">🏆 Tournaments at Kloof</div>
-        <div style="font-size:12px;opacity:0.9;line-height:1.5;">OPR can run full club tournaments with live standings. When a tournament is active, enter your matches as usual and choose it from the event list. Tournament stats appear below.</div>
+      <div style="background:#f3eef8;border:1px solid #d7bde2;border-radius:10px;padding:10px 14px;margin-bottom:14px;font-size:12px;color:#5b3a6e;line-height:1.5;text-align:center;">Only applicable to the CURRENT Tournament you are Playing</div>
+      <div class="ladders-group-title">Tournament Leaderboards</div>
+      <div class="ladders-grid">
+        <button class="menu-btn" onclick="loadTournamentSheet('1fOCsvhMipUZGijvJLO0XPS0pRe-nkx5E7PjJ5XqBO8Q','1660254555','Men\'s Doubles Leaderboard')">Men's Doubles</button>
+        <button class="menu-btn" onclick="loadTournamentSheet('1fOCsvhMipUZGijvJLO0XPS0pRe-nkx5E7PjJ5XqBO8Q','1528202177','Ladies Doubles Leaderboard')">Ladies Doubles</button>
+        <button class="menu-btn" style="grid-column:span 2;" onclick="loadTournamentSheet('1fOCsvhMipUZGijvJLO0XPS0pRe-nkx5E7PjJ5XqBO8Q','349968476','Mixed Doubles Leaderboard')">Mixed Doubles</button>
       </div>
-      <div style="background:#f3eef8;border:1px solid #d7bde2;border-radius:10px;padding:10px 14px;margin:8px 0 8px;font-size:12px;color:#5b3a6e;line-height:1.5;text-align:center;">Only applicable to the CURRENT Tournament you are Playing</div>
       <div class="ladders-group-title">Tournament Stats</div>
       <div class="ladders-grid">
-        <button class="menu-btn" onclick="loadTournamentSheet('1MPJgWXbxyNAhe9kpPg4dxFnHhadDNkxPQN5teqSscQI','1535335554','Men\'s Doubles Stats')">Men's Doubles</button>
-        <button class="menu-btn" onclick="loadTournamentSheet('1MPJgWXbxyNAhe9kpPg4dxFnHhadDNkxPQN5teqSscQI','1779361555','Ladies Doubles Stats')">Ladies Doubles</button>
-        <button class="menu-btn" onclick="loadTournamentSheet('1MPJgWXbxyNAhe9kpPg4dxFnHhadDNkxPQN5teqSscQI','2006988657','Mixed Doubles Stats')">Mixed Doubles</button>
-        <button class="menu-btn" onclick="loadTournamentSheet('1MPJgWXbxyNAhe9kpPg4dxFnHhadDNkxPQN5teqSscQI','863533181','All Sorts Stats')">All Sorts</button>
-        <button class="menu-btn" style="grid-column:span 2;" onclick="loadTournamentSheet('1MPJgWXbxyNAhe9kpPg4dxFnHhadDNkxPQN5teqSscQI','669456070','Universal Stats')">Universal</button>
+        <button class="menu-btn" onclick="loadTournamentSheet('1fOCsvhMipUZGijvJLO0XPS0pRe-nkx5E7PjJ5XqBO8Q','1535335554','Men\'s Doubles Stats')">Men's Doubles</button>
+        <button class="menu-btn" onclick="loadTournamentSheet('1fOCsvhMipUZGijvJLO0XPS0pRe-nkx5E7PjJ5XqBO8Q','1779361555','Ladies Doubles Stats')">Ladies Doubles</button>
+        <button class="menu-btn" onclick="loadTournamentSheet('1fOCsvhMipUZGijvJLO0XPS0pRe-nkx5E7PjJ5XqBO8Q','2006988657','Mixed Doubles Stats')">Mixed Doubles</button>
+        <button class="menu-btn" onclick="loadTournamentSheet('1fOCsvhMipUZGijvJLO0XPS0pRe-nkx5E7PjJ5XqBO8Q','863533181','All Sorts Stats')">All Sorts</button>
+        <button class="menu-btn" style="grid-column:span 2;" onclick="loadTournamentSheet('1fOCsvhMipUZGijvJLO0XPS0pRe-nkx5E7PjJ5XqBO8Q','669456070','Universal Stats')">Universal</button>
       </div>
       <div class="ladders-group-title">Tournament Form</div>
       <div class="ladders-grid one-col">
-        <button class="menu-btn" style="border-color:#7D3C98;box-shadow:0 0 12px rgba(125,60,152,0.4);" onclick="loadTournamentSheet('1MPJgWXbxyNAhe9kpPg4dxFnHhadDNkxPQN5teqSscQI','1653680108','Tournament Form')">Form Wall</button>
+        <button class="menu-btn" style="border-color:#7D3C98;box-shadow:0 0 12px rgba(125,60,152,0.4);" onclick="loadTournamentSheet('1fOCsvhMipUZGijvJLO0XPS0pRe-nkx5E7PjJ5XqBO8Q','378294971','Tournament Form')">Form Wall</button>
       </div>
     </div>
   </div>
@@ -395,13 +403,13 @@
 </div>
 
 <script>
-const SHEET_ID = '1Z-s0Gpd3dVujDNmQE_w6-wV8ScEnwE986Hgf5JEUP7A';
-const CONTROL_PANEL_ID = '1zeURe8OtDRykzzT9zBz1XmyM2aQBctkLIsbU-OqcVDU';
+const SHEET_ID = '13oCWS26OiZ4-IpNNrQ0Fh4W0EWAl-xnUWbrjspa15fE';
+const CONTROL_PANEL_ID = '1fGiMJ5sn1EwtcxV1AlO5xr9pjjnHKBZA0o9xMVEifzM';
 const MASTER_PIN = '1963';
 // PIN_GIDS: gids for Men and Ladies DATA sheets (not wall sheets)
 // Andre: replace MEN_GID and LADIES_GID with actual sheet tab gids
 const PIN_GIDS = {mens:'0', ladies:'951466450'};
-const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz2BTY0yCcm7ZQqZEQyoPGZsPd62fJm3zChub1I6vhMgtCaRINlUlABscmQwhAwEuaD0g/exec';
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzwjKmLkNQ0XM4gPTYeihdcYiAsneZx4V_VPreDCj6f9ImDvddtRCTSUjVY8Vh4Sl6F/exec';
 const GIDS = {
   players:'961698676', matches:'980623229', submissions:'1534372635',
   mens:'552393349', ladies:'1092914270',
@@ -1202,6 +1210,14 @@ function updateOfflineBanner(){
 window.addEventListener('online', updateOfflineBanner);
 window.addEventListener('offline', updateOfflineBanner);
 document.addEventListener('DOMContentLoaded', updateOfflineBanner);
+</script>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('./service-worker.js')
+      .catch(function(err) { console.log('SW registration skipped:', err); });
+  });
+}
 </script>
 </body>
 </html>
