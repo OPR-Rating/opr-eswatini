@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>OPR Eswatini</title>
+<title>OPR Demo</title>
 <link rel="manifest" href="./manifest.json">
 <meta name="theme-color" content="#6C3483">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="OPR Eswatini">
+<meta name="apple-mobile-web-app-title" content="OPR Demo">
 <link rel="apple-touch-icon" href="./icon-192.png">
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -16,7 +16,7 @@
   .app { max-width: 480px; margin: 0 auto; background: #fff; min-height: 100vh; display: flex; flex-direction: column; overflow: hidden; position: relative; }
 
   /* Header */
-  .header { background: #6C3483; color: white; padding: 14px 20px; display: flex; align-items: center; gap: 12px; min-height: 56px; }
+  .header { background:url("header_bg2.png") center center/cover no-repeat; color: white; padding: 16px 20px; display: flex; align-items: center; gap: 12px; min-height: 64px; text-shadow:0 2px 6px rgba(0,0,0,0.45); }
   .header h1 { font-size: 18px; font-weight: 600; flex: 1; }
   .back-btn { background: none; border: none; color: white; font-size: 22px; cursor: pointer; padding: 4px 8px 4px 0; }
 
@@ -27,18 +27,18 @@
   .screen-content { flex: 1; overflow-y: auto; padding: 16px; }
 
   /* Home */
-  .home-hero { background: #fff; padding: 16px 16px 0; text-align: center; }
-  .screen-content.home-content { padding-top: 8px; }
-  .home-hero .hero-logo-panel { width: 100%; background: linear-gradient(135deg, #7D3C98 0%, #6C3483 35%, #5B3A9E 65%, #2E6DB4 100%); border-radius: 18px; padding: 26px 16px 22px; box-shadow: 0 6px 26px rgba(108,52,131,0.45), 0 0 40px rgba(46,109,180,0.25), inset 0 1px 0 rgba(255,255,255,0.15); color: #fff; position: relative; overflow: hidden; }
-  .home-hero .hero-logo-panel::before { content:''; position:absolute; top:-30px; right:-30px; width:120px; height:120px; background:radial-gradient(circle, rgba(241,196,15,0.25), transparent 70%); border-radius:50%; }
-  .home-hero .hero-logo-panel::after { content:''; position:absolute; bottom:-40px; left:-20px; width:140px; height:140px; background:radial-gradient(circle, rgba(46,109,180,0.3), transparent 70%); border-radius:50%; }
+  .home-hero { background:url("header_bg2.png") center center / cover no-repeat; padding:0; margin:0; text-align:center; position:relative; }
+  .screen-content.home-content { padding-top: 0; margin-top: -26px; position: relative; z-index: 5; }
+  .home-hero .hero-logo-panel { display:block; width:100%; margin:0; background:transparent; border-radius:0; padding:42px 16px 40px; color:#fff; position:relative; }
+  .home-hero .hero-logo-panel::before { display:none; content:""; position:absolute; top:-30px; right:-30px; width:120px; height:120px; background:radial-gradient(circle, rgba(241,196,15,0.25), transparent 70%); border-radius:50%; }
+  .home-hero .hero-logo-panel::after { display:none; content:""; position:absolute; bottom:-40px; left:-20px; width:140px; height:140px; background:radial-gradient(circle, rgba(46,109,180,0.3), transparent 70%); border-radius:50%; }
   .home-hero .ball-row { display: flex; align-items: center; justify-content: center; gap: 22px; position: relative; z-index: 2; }
   .home-hero .ball-pair { display: inline-flex; align-items: center; gap: 8px; }
   .home-hero .pball { width: 40px; height: 40px; display: block; filter: drop-shadow(0 0 8px rgba(241,196,15,0.4)) drop-shadow(0 2px 4px rgba(0,0,0,0.3)); }
   .home-hero h2 { font-size: 26px; font-weight: 800; margin: 12px 0 4px; color: #fff; position: relative; z-index: 2; text-shadow: 0 0 16px rgba(255,255,255,0.3); letter-spacing: 0.5px; }
   .home-hero p { font-size: 12px; opacity: 0.9; color: #fff; position: relative; z-index: 2; }
   .opr-logo { font-size: 44px; margin-bottom: 10px; }
-  .btn-enter { width: 100%; padding: 18px; background: linear-gradient(90deg, #6C3483, #8E44AD, #2E6DB4); color: #fff; border: none; border-radius: 14px; font-size: 18px; font-weight: 800; cursor: pointer; margin: 14px 0 12px; letter-spacing: 0.3px; box-shadow: 0 4px 14px rgba(108,52,131,0.35), 0 0 20px rgba(142,68,173,0.3); transition: transform 0.1s; text-shadow: 0 1px 2px rgba(0,0,0,0.25); }
+  .btn-enter { width: calc(100% - 0px); padding: 19px; background: linear-gradient(180deg, #F4C430, #E3AC00); color: #1a1300; border: none; border-radius: 14px; font-size: 18px; font-weight: 800; cursor: pointer; margin: 0 0 16px; position: relative; z-index: 5; letter-spacing: 0.3px; box-shadow: 0 10px 26px rgba(150,100,0,0.45), inset 0 1px 0 rgba(255,255,255,0.55); transition: transform 0.1s; }
   .btn-enter:active { transform: scale(0.98); }
   .menu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 6px; }
   .menu-btn { padding: 14px 8px; background: #fff; border: 1.5px solid #1a1a1a; border-radius: 12px; font-size: 13px; font-weight: 600; color: #1a1a1a; cursor: pointer; text-align: center; transition: all 0.15s; display: flex; align-items: center; justify-content: center; min-height: 52px; }
@@ -55,7 +55,7 @@
 
   /* Ladder */
   .ladder-table { width: auto; min-width: 100%; border-collapse: collapse; font-size: 12px; table-layout: auto; margin: 0; }
-  .ladder-table th { background: #6C3483; color: white; padding: 8px 10px; text-align: center; font-size: 11px; font-weight: 600; position: sticky; top: 0; white-space: nowrap; }
+  .ladder-table th { background: #3a1d6e; color: white; padding: 8px 10px; text-align: center; font-size: 11px; font-weight: 600; position: sticky; top: 0; white-space: nowrap; }
   .ladder-table th:first-child { text-align: left !important; padding-left: 4px; padding-right: 4px; }
   .ladder-table th:nth-child(2) { text-align: left !important; }
   .ladder-table td { padding: 7px 12px; border-bottom: 1px solid #f0f0f0; white-space: nowrap; text-align: center; }
@@ -195,7 +195,7 @@
           <span class="ball-pair"><svg class="pball" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="bg1" cx="38%" cy="33%" r="75%"><stop offset="0%" stop-color="#eaff66"/><stop offset="55%" stop-color="#c4e000"/><stop offset="100%" stop-color="#8fb500"/></radialGradient></defs><circle cx="50" cy="50" r="46" fill="url(#bg1)" stroke="#7da300" stroke-width="1"/><path d="M18 18 Q50 50 18 82" fill="none" stroke="#fbfff0" stroke-width="4" stroke-linecap="round"/><path d="M82 18 Q50 50 82 82" fill="none" stroke="#fbfff0" stroke-width="4" stroke-linecap="round"/><ellipse cx="40" cy="32" rx="14" ry="9" fill="rgba(255,255,255,0.35)"/></svg><svg class="pball" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="bg2" cx="38%" cy="33%" r="75%"><stop offset="0%" stop-color="#eaff66"/><stop offset="55%" stop-color="#c4e000"/><stop offset="100%" stop-color="#8fb500"/></radialGradient></defs><circle cx="50" cy="50" r="46" fill="url(#bg2)" stroke="#7da300" stroke-width="1"/><path d="M18 18 Q50 50 18 82" fill="none" stroke="#fbfff0" stroke-width="4" stroke-linecap="round"/><path d="M82 18 Q50 50 82 82" fill="none" stroke="#fbfff0" stroke-width="4" stroke-linecap="round"/><ellipse cx="40" cy="32" rx="14" ry="9" fill="rgba(255,255,255,0.35)"/></svg></span>
           <span class="ball-pair"><svg class="pball" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="bg3" cx="38%" cy="33%" r="75%"><stop offset="0%" stop-color="#eaff66"/><stop offset="55%" stop-color="#c4e000"/><stop offset="100%" stop-color="#8fb500"/></radialGradient></defs><circle cx="50" cy="50" r="46" fill="url(#bg3)" stroke="#7da300" stroke-width="1"/><path d="M18 18 Q50 50 18 82" fill="none" stroke="#fbfff0" stroke-width="4" stroke-linecap="round"/><path d="M82 18 Q50 50 82 82" fill="none" stroke="#fbfff0" stroke-width="4" stroke-linecap="round"/><ellipse cx="40" cy="32" rx="14" ry="9" fill="rgba(255,255,255,0.35)"/></svg><svg class="pball" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="bg4" cx="38%" cy="33%" r="75%"><stop offset="0%" stop-color="#eaff66"/><stop offset="55%" stop-color="#c4e000"/><stop offset="100%" stop-color="#8fb500"/></radialGradient></defs><circle cx="50" cy="50" r="46" fill="url(#bg4)" stroke="#7da300" stroke-width="1"/><path d="M18 18 Q50 50 18 82" fill="none" stroke="#fbfff0" stroke-width="4" stroke-linecap="round"/><path d="M82 18 Q50 50 82 82" fill="none" stroke="#fbfff0" stroke-width="4" stroke-linecap="round"/><ellipse cx="40" cy="32" rx="14" ry="9" fill="rgba(255,255,255,0.35)"/></svg></span>
         </div>
-        <h2>OPR-ESWATINI</h2>
+        <h2>OPR-Rating</h2>
         <p>Open Padel Rating System</p>
       </div>
     </div>
@@ -239,7 +239,7 @@
       </div>
       <div class="ladders-group-title">Form</div>
       <div class="ladders-grid one-col">
-        <button class="menu-btn" style="border-color:#7D3C98;box-shadow:0 0 12px rgba(125,60,152,0.4);" onclick="loadFormWall('579066807','Form')">Form Wall</button>
+        <button class="menu-btn" style="border-color:#7D3C98;box-shadow:0 0 12px rgba(125,60,152,0.4);" onclick="loadFormWall('1170425093','Form')">Form Wall</button>
       </div>
     </div>
   </div>
@@ -286,21 +286,21 @@
       <div style="background:#f3eef8;border:1px solid #d7bde2;border-radius:10px;padding:10px 14px;margin-bottom:14px;font-size:12px;color:#5b3a6e;line-height:1.5;text-align:center;">Only applicable to the CURRENT Tournament you are Playing</div>
       <div class="ladders-group-title">Tournament Leaderboards</div>
       <div class="ladders-grid">
-        <button class="menu-btn" onclick="loadTournamentSheet('1fOCsvhMipUZGijvJLO0XPS0pRe-nkx5E7PjJ5XqBO8Q','1660254555','Men\'s Doubles Leaderboard')">Men's Doubles</button>
-        <button class="menu-btn" onclick="loadTournamentSheet('1fOCsvhMipUZGijvJLO0XPS0pRe-nkx5E7PjJ5XqBO8Q','1528202177','Ladies Doubles Leaderboard')">Ladies Doubles</button>
-        <button class="menu-btn" style="grid-column:span 2;" onclick="loadTournamentSheet('1fOCsvhMipUZGijvJLO0XPS0pRe-nkx5E7PjJ5XqBO8Q','349968476','Mixed Doubles Leaderboard')">Mixed Doubles</button>
+        <button class="menu-btn" onclick="loadTournamentSheet('1z3Z9i8_mmckKr-IrGkaq3XRk9k1wxL9IjuU-gnQzeRI','1660254555','Men\'s Doubles Leaderboard')">Men's Doubles</button>
+        <button class="menu-btn" onclick="loadTournamentSheet('1z3Z9i8_mmckKr-IrGkaq3XRk9k1wxL9IjuU-gnQzeRI','1528202177','Ladies Doubles Leaderboard')">Ladies Doubles</button>
+        <button class="menu-btn" style="grid-column:span 2;" onclick="loadTournamentSheet('1z3Z9i8_mmckKr-IrGkaq3XRk9k1wxL9IjuU-gnQzeRI','349968476','Mixed Doubles Leaderboard')">Mixed Doubles</button>
       </div>
       <div class="ladders-group-title">Tournament Stats</div>
       <div class="ladders-grid">
-        <button class="menu-btn" onclick="loadTournamentSheet('1fOCsvhMipUZGijvJLO0XPS0pRe-nkx5E7PjJ5XqBO8Q','1535335554','Men\'s Doubles Stats')">Men's Doubles</button>
-        <button class="menu-btn" onclick="loadTournamentSheet('1fOCsvhMipUZGijvJLO0XPS0pRe-nkx5E7PjJ5XqBO8Q','1779361555','Ladies Doubles Stats')">Ladies Doubles</button>
-        <button class="menu-btn" onclick="loadTournamentSheet('1fOCsvhMipUZGijvJLO0XPS0pRe-nkx5E7PjJ5XqBO8Q','2006988657','Mixed Doubles Stats')">Mixed Doubles</button>
-        <button class="menu-btn" onclick="loadTournamentSheet('1fOCsvhMipUZGijvJLO0XPS0pRe-nkx5E7PjJ5XqBO8Q','863533181','All Sorts Stats')">All Sorts</button>
-        <button class="menu-btn" style="grid-column:span 2;" onclick="loadTournamentSheet('1fOCsvhMipUZGijvJLO0XPS0pRe-nkx5E7PjJ5XqBO8Q','669456070','Universal Stats')">Universal</button>
+        <button class="menu-btn" onclick="loadTournamentSheet('1z3Z9i8_mmckKr-IrGkaq3XRk9k1wxL9IjuU-gnQzeRI','1535335554','Men\'s Doubles Stats')">Men's Doubles</button>
+        <button class="menu-btn" onclick="loadTournamentSheet('1z3Z9i8_mmckKr-IrGkaq3XRk9k1wxL9IjuU-gnQzeRI','1779361555','Ladies Doubles Stats')">Ladies Doubles</button>
+        <button class="menu-btn" onclick="loadTournamentSheet('1z3Z9i8_mmckKr-IrGkaq3XRk9k1wxL9IjuU-gnQzeRI','2006988657','Mixed Doubles Stats')">Mixed Doubles</button>
+        <button class="menu-btn" onclick="loadTournamentSheet('1z3Z9i8_mmckKr-IrGkaq3XRk9k1wxL9IjuU-gnQzeRI','863533181','All Sorts Stats')">All Sorts</button>
+        <button class="menu-btn" style="grid-column:span 2;" onclick="loadTournamentSheet('1z3Z9i8_mmckKr-IrGkaq3XRk9k1wxL9IjuU-gnQzeRI','669456070','Universal Stats')">Universal</button>
       </div>
       <div class="ladders-group-title">Tournament Form</div>
       <div class="ladders-grid one-col">
-        <button class="menu-btn" style="border-color:#7D3C98;box-shadow:0 0 12px rgba(125,60,152,0.4);" onclick="loadTournamentSheet('1fOCsvhMipUZGijvJLO0XPS0pRe-nkx5E7PjJ5XqBO8Q','378294971','Tournament Form')">Form Wall</button>
+        <button class="menu-btn" style="border-color:#7D3C98;box-shadow:0 0 12px rgba(125,60,152,0.4);" onclick="loadTournamentSheet('1z3Z9i8_mmckKr-IrGkaq3XRk9k1wxL9IjuU-gnQzeRI','487508071','Tournament Form')">Form Wall</button>
       </div>
     </div>
   </div>
@@ -403,13 +403,13 @@
 </div>
 
 <script>
-const SHEET_ID = '13oCWS26OiZ4-IpNNrQ0Fh4W0EWAl-xnUWbrjspa15fE';
-const CONTROL_PANEL_ID = '1fGiMJ5sn1EwtcxV1AlO5xr9pjjnHKBZA0o9xMVEifzM';
+const SHEET_ID = '1xfMQbn54iFItbPQ-78RBe76YDqg6MUxCKW_qYIAKCWs';
+const CONTROL_PANEL_ID = '1W_3zmcIc8unk7e5flO19dRrN1XndQPutruKyMrZpOjY';
 const MASTER_PIN = '1963';
 // PIN_GIDS: gids for Men and Ladies DATA sheets (not wall sheets)
 // Andre: replace MEN_GID and LADIES_GID with actual sheet tab gids
 const PIN_GIDS = {mens:'0', ladies:'951466450'};
-const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxmJ9zIIlNjXWw6E7AWIu1aOkFKKGzhgqFH9L63HT1Tu1GnJddiNqTPz6UcyDjCZRQ/exec';
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxbv6IZfY2D2NSlGVz68kMvEwfNxO8i69I64kvHh1XVXLAbzvQ9RGZoglGWZ5uhyCcm/exec';
 const GIDS = {
   players:'961698676', matches:'980623229', submissions:'1534372635',
   mens:'552393349', ladies:'1092914270',
