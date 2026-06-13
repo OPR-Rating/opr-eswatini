@@ -490,13 +490,11 @@ async function loadFormWall(gid, title) {
     const data = rows.slice(1).map(row=>parseCSV(row)).filter(row=>row[0]!=='');
     let html = '<div style="padding:12px 14px;background:#f3eef8;border:1px solid #d7bde2;border-radius:10px;margin:14px 12px 12px;font-size:12px;color:#5b3a6e;line-height:1.5;">';
     html += '<strong>What is Form?</strong> Your overall performance — not just how often you win, but who you played, how convincingly, and how by much. Requires a minimum of 12 sets to appear.</div>';
-    html += '<table class="ladder-table"><thead><tr><th>#</th>';
+    html += '<table class="ladder-table"><thead><tr>';
     headers.forEach(h=>{html+=`<th>${h}</th>`;});
     html+='</tr></thead><tbody>';
     data.forEach((row,idx)=>{
-      const pos=idx+1;
-      const cls=pos===1?'rank-1':pos===2?'rank-2':pos===3?'rank-3':'';
-      html+='<tr><td><span class="rank-badge '+cls+'">'+pos+'</span></td>';
+      html+='<tr>';
       row.forEach(cell=>{ html+=`<td>${cell}</td>`; });
       html+='</tr>';
     });
